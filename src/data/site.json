@@ -1,12 +1,15 @@
 {
   "navigation": [
-    { "name": "About me", "path": "#about-me" },
-    { "name": "Experience", "path": "#experience" },
-    { "name": "Projects", "path": "#projects" }
+    { "name": "About me", "path": "#about-me", "emoji": "🧔🏽‍♂️​" },
+    { "name": "Experience", "path": "#experience", "emoji": "💼" },
+    { "name": "Projects", "path": "#projects", "emoji": "🚀" }
   ],
-  "linkCV": "https://bit.ly/3M0qbqQ",
+  "cv": {
+    "label": "Download CV",
+    "url": "https://bit.ly/3M0qbqQ"
+  },
   "hero": {
-    "head": "Hi! 👋 I'm Andres a",
+    "head": "👋 Hi! I'm Andres a",
     "main": "Fullstack developer",
     "subtitle": "I focus on building",
     "key-words": ["scalable", "efficent", "high-performance", "user-centered applications"],
@@ -37,7 +40,7 @@
     "label": "Open to work"
   },
   "about-me": {
-    "title": "👨 About me",
+    "title": "🧔🏽‍♂️​ About me",
     "who-i-am": {
       "title": "Who am i?",
       "description": [
