@@ -1,9 +1,19 @@
 ---
-import siteData from '../data/site.json';
+import enSiteData from '../data/en-site.json';
+import esSiteData from '../data/es-site.json';
 import { TypingAnimation } from './TypingAnimation';
 import { Accordion } from './Accordion';
 import { Icon } from './Icon';
 import { Navbar } from './Navbar';
+
+export const prerender = false;
+
+const lang = Astro.locals?.lang;
+
+let siteData = enSiteData;
+console.log(lang);
+
+if (lang === 'es') siteData = esSiteData;
 ---
 
 <div class='relative w-full' id='container'>

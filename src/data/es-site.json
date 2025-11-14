@@ -1,0 +1,164 @@
+{
+  "navigation": [
+    { "name": "Sobre mí", "path": "#about-me", "emoji": "🧔🏽‍♂️​" },
+    { "name": "Experiencia", "path": "#experience", "emoji": "💼" },
+    { "name": "Proyectos", "path": "#projects", "emoji": "🚀" }
+  ],
+  "cv": {
+    "label": "Descargar CV",
+    "url": "https://bit.ly/3M0qbqQ"
+  },
+  "hero": {
+    "head": "👋 ¡Hola! Soy Andres",
+    "main": "Desarrollador Fullstack",
+    "subtitle": "Me enfoco en construir",
+    "key-words": [
+      "escalables",
+      "eficientes",
+      "de alto rendimiento",
+      "aplicaciones centradas en el usuario"
+    ],
+    "button": "Descargar CV",
+    "links": [
+      {
+        "label": "joseandresjimenez66@gmail.com",
+        "icon": "email",
+        "link": "mailto:joseandresjimenez66@gmail.com",
+        "color": "blue-300"
+      },
+      {
+        "label": "Github",
+        "icon": "github",
+        "link": "https://github.com/Andreszd",
+        "color": "violet-300"
+      },
+      {
+        "label": "LinkedIn",
+        "icon": "linkedIn",
+        "color": "blue-300",
+        "link": "https://www.linkedin.com/in/jose-andres-jimenez-contreras-b6a33122b"
+      }
+    ]
+  },
+  "status": {
+    "available": true,
+    "label": "Disponible para trabajar"
+  },
+  "about-me": {
+    "title": "🧔🏽‍♂️​ Sobre mí",
+    "who-i-am": {
+      "title": "¿Quién soy?",
+      "description": [
+        "Hola, soy Jose Andres Jimenez Contreras, Desarrollador FullStack con más de tres años de experiencia. Soy autodidacta y apasionado por aprender cosas nuevas cada día. Me encanta explorar nuevas tecnologías, experimentar y asumir desafíos que me saquen de mi zona de confort.",
+        "He creado productos SaaS desde cero, diseñando sistemas que son escalables, adaptables y listos para crecer con diferentes clientes. Mi prioridad siempre es la entrega: convertir ideas en soluciones funcionales, confiables y con impacto.",
+        "He trabajado en entornos startup donde la rapidez y la adaptabilidad son esenciales, y me enorgullece poder aprender y adaptarme rápidamente a nuevos stacks o necesidades del proyecto. Para mí, el desarrollo no se trata solo de escribir código, sino de crear valor y crecer día a día."
+      ]
+    },
+    "recognition": {
+      "title": "Reconocimientos ✨",
+      "recognitions": [
+        {
+          "title": "Contribuidor Innovador 🏆",
+          "company": "DeltaX — Q1 2025",
+          "description": "Reconocido por el liderazgo en impulsar mejoras continuas en el desarrollo frontend y por buscar soluciones eficientes en cada proyecto."
+        }
+      ]
+    }
+  },
+  "work-experience": {
+    "title": "💼 Experiencia Laboral",
+    "timeline": [
+      {
+        "time": "📅 Abr 2022 - Ago 2025",
+        "title": "👨‍💻 Desarrollador Frontend | DeltaX",
+        "achievements": [
+          "Desarrollé aplicaciones web escalables en React.js que optimizaron operaciones logísticas, permitiendo monitoreo de carga en tiempo real y gestión de transportistas.",
+          "Optimicé el rendimiento de la aplicación, reduciendo tiempos de carga y mejorando la experiencia del usuario mediante técnicas avanzadas de caché y lazy loading, logrando un 30% de mejora.",
+          "Lideré la migración del código JavaScript a TypeScript, reduciendo errores en tiempo de ejecución y aumentando la mantenibilidad del código.",
+          "Implementé soluciones de autenticación con AWS Cognito, mejorando la seguridad y el control de acceso de usuarios.",
+          "Desarrollé una librería de componentes compartidos, aumentando la eficiencia del desarrollo en múltiples proyectos.",
+          "Construí una arquitectura micro-frontend utilizando Module Federation y Rspack para mejorar la escalabilidad y el desarrollo modular.",
+          "Desarrollé MVPs de distinta complejidad, seleccionando las tecnologías más adecuadas para garantizar escalabilidad y eficiencia (por ejemplo: herramientas de manejo de estado, manejo de formularios, mapas, etc.)",
+          "Diseñé e implementé formularios dinámicos complejos, reduciendo en un 40% el esfuerzo manual en su creación."
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "🛠️ Habilidades",
+    "list": [
+      {
+        "title": "💻 Lenguajes de Programación",
+        "items": [
+          { "name": "TypeScript", "icon": "ts" },
+          { "name": "JavaScript", "icon": "js" },
+          { "name": "Java", "icon": "java" }
+        ]
+      },
+      {
+        "title": "🎨 Desarrollo Frontend",
+        "items": [
+          { "name": "Reactjs", "icon": "react" },
+          { "name": "Angular", "icon": "angular" },
+          { "name": "NextJs", "icon": "nextjs" },
+          { "name": "Astro", "icon": "astro" },
+          { "name": "Tailwind", "icon": "tailwind" },
+          { "name": "Material UI", "icon": "materialui" },
+          { "name": "HTML", "icon": "html" },
+          { "name": "Css", "icon": "css" }
+        ]
+      },
+      {
+        "title": "⚙️ Desarrollo Backend",
+        "items": [
+          { "name": "Node js", "icon": "nodejs" },
+          { "name": "Nest Js", "icon": "nestjs" },
+          { "name": "Express js", "icon": "express" },
+          { "name": "Springboot", "icon": "springboot" }
+        ]
+      },
+      {
+        "title": "🗄️ Base de Datos & Almacenamiento",
+        "items": [
+          { "name": "MongoDB", "icon": "mongodb" },
+          { "name": "Postrgresql", "icon": "postgresql" }
+        ]
+      },
+      {
+        "title": "🧰 Herramientas & Librerías",
+        "items": [
+          "Zustand",
+          "Redux",
+          "Google Maps API",
+          "React hook form",
+          "Redux form",
+          "Formik",
+          "Rjsx",
+          "pnpm"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "🚀 Proyectos",
+    "keyFeaturesTitle": "Características principales",
+    "list": [
+      {
+        "imgs": ["img/web-app-1.png"],
+        "title": "Gestión de Marcadores",
+        "description": "Aplicación web personalizada de gestión de marcadores con una extensión de navegador que permite guardar, organizar y acceder a enlaces fácilmente desde cualquier dispositivo.",
+        "features": [
+          "🧠 Scraper Inteligente – Obtiene automáticamente títulos de páginas, metadatos y favicons al agregar un nuevo marcador.",
+          "🧩 Integración con Extensión – Se conecta sin problemas con una extensión para mantener sesiones y guardar páginas directamente desde cualquier pestaña.",
+          "🖱️ Interfaz Drag & Drop – Permite reorganizar marcadores y grupos de forma intuitiva.",
+          "⚙️ Código Compartido – Construido como un monorepo, permitiendo compartir utilidades, tipos y componentes entre proyectos.",
+          "🔖 Agrupación, Filtros y Paginación – Organiza marcadores por categoría, aplica filtros y navega colecciones grandes con facilidad.",
+          "💾 Guardado Rápido – Guarda páginas al instante desde la barra del navegador sin interrumpir el flujo de trabajo.",
+          "🎨 UI Pulida – Interfaz limpia, responsiva y accesible con atención al detalle."
+        ],
+        "stack": ["Angular", "Express", "MongoDB", "Monorepo", "OAuth", "Chrome Extension API"],
+        "repositoryUrl": "https://github.com/Andreszd/bookmark-manager"
+      }
+    ]
+  }
+}
