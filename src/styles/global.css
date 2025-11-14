@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.blink::after {
+  content: '|';
+  color: var(--color-gray-600);
+  margin-left: 2px;
+}
+
+.ping-animation {
+  animation: var(--animate-ping);
+  animation-delay: 1.75s;
+}
+html {
+  scroll-behavior: smooth;
+}

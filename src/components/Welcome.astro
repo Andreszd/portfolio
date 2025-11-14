@@ -1,0 +1,245 @@
+---
+import siteData from '../data/site.json';
+import { TypingAnimation } from './TypingAnimation';
+import { Accordion } from './Accordion';
+import { Icon } from './Icon';
+---
+
+<div class='relative w-full' id='container'>
+  <nav
+    class='md:px-50 fixed z-100 w-full flex justify-between items-center backdrop-blur-md'
+    id='header'
+  >
+    <div class='avatar'>
+      <a href='#main' class='font-bold text-gray-700 hover:text-green-500'>{'<JA/>'}</a>
+    </div>
+
+    <div class='flex gap-10 py-5 items-center' id='navigation'>
+      {
+        siteData.navigation.map(({ name, path }) => (
+          <a class='text-gray-500 hover:text-green-600' href={path}>
+            {name}
+          </a>
+        ))
+      }
+      <a
+        href={siteData.linkCV}
+        class='bg-green-500 hover:bg-green-400
+ p-2 px-4 text-white rounded-3xl'>Download CV</a
+      >
+    </div>
+  </nav>
+
+  <section
+    class='md:px-30 xl:px-50 w-full flex justify-between items-center h-screen bg-gradient-to-t from-gray-50 to-green-50'
+    id='main'
+  >
+    <div class='flex flex-col items-start gap-10'>
+      <div class='flex flex-col gap-2'>
+        <div class='flex gap-2 items-center'>
+          <div class='relative'>
+            <div class='w-3 h-3 rounded-full bg-green-400 ping-animation'></div>
+            <div class='absolute top-0 w-3 h-3 rounded-full bg-green-400'></div>
+          </div>
+          <p class='text-gray-600'>{siteData.status.label}</p>
+        </div>
+        <p class='text-3xl text-gray-600'>{siteData.hero.head}</p>
+        <p class='text-6xl text-gray-700 font-semibold'>{siteData.hero.main}</p>
+        <div>
+          <p class='text-3xl text-gray-600'>
+            {siteData.hero.subtitle}
+            <TypingAnimation client:load texts={siteData.hero['key-words']} />
+          </p>
+          <p class='text-3xl text-gray-600'>web applications.</p>
+        </div>
+      </div>
+      <ol class='flex flex-col gap-2 text-gray-400 text-sm'>
+        <li class='flex items-center group hover:text-gray-700'>
+          <span class='group-hover:text-red-500'>
+            <Icon client:load type='location' />
+          </span>
+          Cochabamba, Bolivia
+        </li>
+        {
+          siteData.hero.links.map(({ label, icon, link, color }) => {
+            const classes = `text-${color}`;
+            return (
+              <li>
+                <a class='group hover:text-gray-700 flex items-center' href={link} target='_blank'>
+                  <span class={`group-hover:${classes}`}>
+                    <Icon client:load type={icon} />
+                  </span>
+                  {label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ol>
+    </div>
+    <div>
+      <!-- border-15 border-green-300/15 -->
+      <div
+        class='relative rounded-full lg:w-100 lg:h-100 md:w-60 md:h-60 overflow-hidden ring-20 ring-green-300/15'
+      >
+        <img src='img/profile.jpg ' class='w-full h-full object-fit' />
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class='flex flex-col pb-20 md:px-50 gap-40'>
+  <section class='flex flex-col justify-between items-start gap-10 w-full pt-20' id='about-me'>
+    <h2 class='text-3xl text-gray-700 font-semibold'>{siteData['about-me']?.title}</h2>
+    <div class='flex justify-between gap-20'>
+      <div class='flex flex-col gap-4 w-1/2'>
+        <h3 class='text-lg font-semibold text-gray-700'>
+          {siteData['about-me']['who-i-am'].title}
+        </h3>
+        <div
+          class='relative text-gray-500 bg-gradient-to-r from-green-300/10 to-green-500/8 p-5 rounded-md'
+        >
+          <div class='relative p-2'>
+            <span
+              class='absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-green-200 to-green-600 rounded-full'
+            ></span>
+            {
+              siteData['about-me']['who-i-am'].description.map((text) => (
+                <p class='pl-2 text-lg mb-3'>{text}</p>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+      <div class='flex flex-col gap-4 w-1/2'>
+        <h3 class='text-lg font-semibold text-gray-700'>
+          {siteData['about-me'].recognition.title}
+        </h3>
+        <div class='flex'>
+          {
+            siteData['about-me'].recognition.recognitions.map(({ title, description, company }) => (
+              <div class='flex items-center gap-5 p-4 bg-gradient-to-r from-yellow-300 to-yellow-500 rounded-md text-white hover:shadow'>
+                <div class='w-40 rounded-md overflow-hidden'>
+                  <img src='img/recognition.jpeg' />
+                </div>
+                <div>
+                  <p class='text-lg font-semibold'>{title}</p>
+                  <p class='text-md font-semibold'>{company}</p>
+                  <p class='text-lg'>{description}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class='flex flex-col justify-between items-start gap-10 pt-20' id='experience'>
+    <h2 class='text-3xl text-gray-700 font-semibold'>{siteData['work-experience']?.title}</h2>
+
+    <ol class='relative border-s border-green-400'>
+      {
+        siteData['work-experience']?.timeline.map(({ time, title, achievements }) => (
+          <li class='ms-4'>
+            <div class='absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-green-400  bg-green-400' />
+            <time class='mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
+              {time}
+            </time>
+            <h3 class='text-lg font-semibold text-gray-700 '>{title}</h3>
+            <ol class='flex flex-col gap-2 mt-4 px-7 py-5 bg-white rounded-md shadow-md'>
+              {achievements.map((text) => (
+                <li>
+                  <p class='text-base font-normal text-gray-500'>{text}</p>
+                </li>
+              ))}
+            </ol>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class='flex flex-col justify-between items-start gap-10 pt-10' id='skills'>
+    <h2 class='text-3xl text-gray-700 font-semibold'>{siteData.skills.title}</h2>
+    <div class='flex flex-col gap-5'>
+      {
+        siteData.skills.list.map(({ title, items }) => (
+          <div class='flex flex-col gap-5'>
+            <p class='text-lg text-gray-700'>{title}</p>
+            <div class='flex gap-2'>
+              {items.map((item) => (
+                <span class='flex gap-2 items-center py-1 px-4 bg-gray-100 rounded-2xl text-sm border-1 border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-gray-500 font-medium cursor-default'>
+                  <Icon client:load type={item.icon} />
+                  {item?.name ?? item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class='flex flex-col justify-between items-start gap-10 pb-0 pt-10' id='projects'>
+    <h2 class='text-3xl text-gray-700 font-semibold'>{siteData.projects.title}</h2>
+    <div class='flex justify-center w-full'>
+      {
+        siteData.projects.list.map(({ title, description, stack, features, imgs = [] }) => (
+          <div class='group w-100 bg-white border border-gray-200 rounded-md shadow-md hover:border-green-500 overflow-hidden'>
+            <div class='relative h-50 '>
+              <img src={imgs[0]} class='w-full' />
+              <div class='absolute inset-0 bg-gradient-to-t from-black/15 via-black/5 to-transparent' />
+              <p class='absolute bottom-0 font-semibold p-2 text-gray-700 group-hover:text-green-600'>
+                {title}
+              </p>
+            </div>
+            <div class='flex flex-col p-2 gap-2'>
+              <p class='font-normal text-sm text-gray-500'>{description}</p>
+              <div class='flex flex-col gap-2 items-start'>
+                <p class='text-gray-700'>Main features</p>
+                <ol class='flex flex-col gap-2'>
+                  {features.slice(0, 3).map((feature) => (
+                    <li class='text-gray-500 text-sm'>{feature}</li>
+                  ))}
+                  <Accordion client:load text='See more'>
+                    {features.slice(3, -1).map((feature) => (
+                      <li class='text-gray-500 text-sm'>{feature}</li>
+                    ))}
+                  </Accordion>
+                </ol>
+              </div>
+              <div class='flex items-start flex-wrap gap-2 py-2'>
+                {stack.map((item) => (
+                  <span class=' px-2 py-1  bg-gray-100 rounded-2xl text-xs border-1 border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-gray-500 font-medium cursor-default'>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div class=' p-2 '>
+              <a
+                class='flex text-lg items-center gap-2 text-gray-500 hover:text-green-600'
+                title='View repository'
+              >
+                <svg
+                  stroke='currentColor'
+                  fill='currentColor'
+                  stroke-width='0'
+                  viewBox='0 0 496 512'
+                  height='1em'
+                  width='1em'
+                  xmlns='http://www.w3.org/2000/svg'
+                >
+                  <path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z' />
+                </svg>
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</div>
+
+<style></style>
+<script is:inline></script>

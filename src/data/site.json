@@ -1,0 +1,155 @@
+{
+  "navigation": [
+    { "name": "About me", "path": "#about-me" },
+    { "name": "Experience", "path": "#experience" },
+    { "name": "Projects", "path": "#projects" }
+  ],
+  "linkCV": "https://bit.ly/3M0qbqQ",
+  "hero": {
+    "head": "Hi! 👋 I'm Andres a",
+    "main": "Fullstack developer",
+    "subtitle": "I focus on building",
+    "key-words": ["scalable", "efficent", "high-performance", "user-centered applications"],
+    "button": "Download CV",
+    "links": [
+      {
+        "label": "joseandresjimenez66@gmail.com",
+        "icon": "email",
+        "link": "mailto:joseandresjimenez66@gmail.com",
+        "color": "blue-300"
+      },
+      {
+        "label": "Github",
+        "icon": "github",
+        "link": "https://github.com/Andreszd",
+        "color": "violet-300"
+      },
+      {
+        "label": "LinkedIn",
+        "icon": "linkedIn",
+        "color": "blue-300",
+        "link": "https://www.linkedin.com/in/jose-andres-jimenez-contreras-b6a33122b"
+      }
+    ]
+  },
+  "status": {
+    "available": true,
+    "label": "Open to work"
+  },
+  "about-me": {
+    "title": "👨 About me",
+    "who-i-am": {
+      "title": "Who am i?",
+      "description": [
+        "Hi, I’m Jose Andres Jimenez Contreras, a FullStack Developer with more than three years of experience. I’m self-taught and passionate about learning new things every day I love exploring new technologies, experimenting, and taking on challenges that push me out of my comfort zone.",
+        "I’ve built SaaS products from the ground up, designing systems that are scalable, adaptable, and ready to grow with different customers. My top priority is always delivery turning ideas into working, reliable solutions that make an impact.",
+        "I’ve worked in startup environments where speed and adaptability are essential, and I take pride in being able to quickly learn and adapt to new stacks or project needs. For me, development is not just about writing code  it’s about creating value and growing every day."
+      ]
+    },
+    "recognition": {
+      "title": "Recognitions ✨",
+      "recognitions": [
+        {
+          "title": "Innovative Contributor 🏆",
+          "company": "DeltaX — Q1 2025",
+          "description": "Recognized for leadership in driving continuous improvements in frontend development and for seeking efficient solutions in every project."
+        }
+      ]
+    }
+  },
+  "work-experience": {
+    "title": "💼 Work Experience",
+    "timeline": [
+      {
+        "time": "📅 Apr 2022 - Agus 2025",
+        "title": "👨‍💻 Frontend Developer | DeltaX",
+        "achievements": [
+          "Developed scalable React.js web applications that streamlined logistics operations, enabling real-time freight monitoring and trucker management.",
+          "Optimized application performance, reducing load times and improving UX through advanced caching and lazy loading techniques, leading to a 30% faster load time.",
+          "Led migration of JavaScript codebase to TypeScript, reducing runtime errors and increasing code maintainability.",
+          "Implemented authentication solutions with AWS Cognito, improving security and user access control.",
+          "Developed a shared component library, increasing development efficiency across multiple projects.",
+          "Built a micro-frontend architecture, utilizing Module Federation and Rspack to enhance scalability and modular development.",
+          "Developed MVPs of varying complexity, selecting the most suitable technologies to ensure scalability and efficiency (e.g., State management tools, form management, maps, etc.)",
+          "Designed and implemented complex dynamic forms, reducing manual form-building efforts by 40%."
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "🛠️ Skills",
+    "list": [
+      {
+        "title": "💻 Programming Language",
+        "items": [
+          { "name": "TypeScript", "icon": "ts" },
+          { "name": "JavaScript", "icon": "js" },
+          { "name": "Java", "icon": "java" }
+        ]
+      },
+      {
+        "title": "🎨 Frontend Development",
+        "items": [
+          { "name": "Reactjs", "icon": "react" },
+          { "name": "Angular", "icon": "angular" },
+          { "name": "NextJs", "icon": "nextjs" },
+          { "name": "Astro", "icon": "astro" },
+          { "name": "Tailwind", "icon": "tailwind" },
+          { "name": "Material UI", "icon": "materialui" },
+          { "name": "HTML", "icon": "html" },
+          { "name": "Css", "icon": "css" }
+        ]
+      },
+      {
+        "title": "⚙️ Backend Development",
+        "items": [
+          { "name": "Node js", "icon": "nodejs" },
+          { "name": "Nest Js", "icon": "nestjs" },
+          { "name": "Express js", "icon": "express" },
+          { "name": "Springboot", "icon": "springboot" }
+        ]
+      },
+      {
+        "title": "🗄️ Database & Storage",
+        "items": [
+          { "name": "MongoDB", "icon": "mongodb" },
+          { "name": "Postrgresql", "icon": "postgresql" }
+        ]
+      },
+      {
+        "title": "🧰 Tools & Libraries",
+        "items": [
+          "Zustand",
+          "Redux",
+          "Google Maps API",
+          "React hook form",
+          "Redux form",
+          "Formik",
+          "Rjsx",
+          "pnpm"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "🚀 Projects",
+    "keyFeaturesTitle": "Key features",
+    "list": [
+      {
+        "imgs": ["img/web-app-1.png"],
+        "title": "Bookmark Managment",
+        "description": "Custom bookmark management web app with an accompanying browser extension that allows users to easily save, organize, and access links across devices. ",
+        "features": [
+          "🧠 Smart Scraper – Automatically fetches and stores page titles, metadata, and favicons when adding a new bookmark.",
+          "🧩 Browser Extension Integration – Seamlessly connects with an extension to maintain user sessions and save pages directly from any open tab.",
+          "🖱️ Drag & Drop Interface – Provides an intuitive way to reorder bookmarks and groups for an improved user experience.",
+          "⚙️ Shared Codebase – Built as a monorepo, enabling shared utilities, types, and components between projects to improve consistency and development speed.",
+          "🔖 Grouping, Filtering & Pagination – Organize bookmarks by category, apply filters, and navigate large collections easily.",
+          "💾 Quick Save – Add pages instantly using the browser toolbar without leaving your current workflow.",
+          "🎨 Polished UI – Clean, responsive, and user-friendly interface with attention to detail and accessibility."
+        ],
+        "stack": ["Angular", "Express", "MongoDB", "Monorepo", "OAuth", "Chrome Extension API"]
+      }
+    ]
+  }
+}
