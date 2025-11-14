@@ -151,7 +151,8 @@
           "💾 Quick Save – Add pages instantly using the browser toolbar without leaving your current workflow.",
           "🎨 Polished UI – Clean, responsive, and user-friendly interface with attention to detail and accessibility."
         ],
-        "stack": ["Angular", "Express", "MongoDB", "Monorepo", "OAuth", "Chrome Extension API"]
+        "stack": ["Angular", "Express", "MongoDB", "Monorepo", "OAuth", "Chrome Extension API"],
+        "repositoryUrl": "https://github.com/Andreszd/bookmark-manager"
       }
     ]
   }
