@@ -5,13 +5,13 @@ import { TypingAnimation } from './TypingAnimation';
 import { Accordion } from './Accordion';
 import { Icon } from './Icon';
 import { Navbar } from './Navbar';
+import { Carousel } from './Carousel';
 
 export const prerender = false;
 
 const lang = Astro.locals?.lang;
 
 let siteData = enSiteData;
-console.log(lang);
 
 if (lang === 'es') siteData = esSiteData;
 ---
@@ -177,7 +177,7 @@ if (lang === 'es') siteData = esSiteData;
           ({ title, description, stack, features, imgs = [], repositoryUrl }) => (
             <div class='group w-100 bg-white border border-gray-200 rounded-md shadow-md hover:border-green-500 overflow-hidden'>
               <div class='relative h-50 '>
-                <img src={imgs[0]} class='w-full' />
+                <Carousel client:load imgs={imgs} />
                 <div class='absolute inset-0 bg-gradient-to-t from-black/15 via-black/5 to-transparent' />
                 <p class='absolute bottom-0 font-semibold p-2 text-gray-700 group-hover:text-green-600'>
                   {title}

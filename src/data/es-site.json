@@ -144,7 +144,11 @@
     "keyFeaturesTitle": "Características principales",
     "list": [
       {
-        "imgs": ["img/web-app-1.png"],
+        "imgs": [
+          "img/bookmark-project/1.png",
+          "img/bookmark-project/2.png",
+          "img/bookmark-project/3.png"
+        ],
         "title": "Gestión de Marcadores",
         "description": "Aplicación web personalizada de gestión de marcadores con una extensión de navegador que permite guardar, organizar y acceder a enlaces fácilmente desde cualquier dispositivo.",
         "features": [

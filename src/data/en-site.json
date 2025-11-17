@@ -139,7 +139,11 @@
     "keyFeaturesTitle": "Key features",
     "list": [
       {
-        "imgs": ["img/web-app-1.png"],
+        "imgs": [
+          "img/bookmark-project/1.png",
+          "img/bookmark-project/2.png",
+          "img/bookmark-project/3.png"
+        ],
         "title": "Bookmark Managment",
         "description": "Custom bookmark management web app with an accompanying browser extension that allows users to easily save, organize, and access links across devices. ",
         "features": [
